@@ -11,7 +11,7 @@ fileList = os.listdir(path+'/dataset')
 for i in range(len(fileList)):
     fileList[i] = path + '/dataset/' + fileList[i]
 
-filename = fileList[0]
+filename = fileList[3]
 c = 0
 city_list = []
 with open(filename) as f:
@@ -24,7 +24,7 @@ with open(filename) as f:
             x = line.split(' ')[1]
             y = line.split(' ')[2].replace('\n','')
             city_list.append([x,y])
-
+numNodes = len(city_list)
 # Add Dustbins
 for i in range(numNodes):
     RouteManager.addDustbin(Dustbin(int(city_list[i][0]), int(city_list[i][1])))
