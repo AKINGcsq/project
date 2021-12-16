@@ -15,6 +15,7 @@ class Dustbin:
 			self.x = x
 			self.y = y
 
+
 	def getX (self):
 		return self.x
 

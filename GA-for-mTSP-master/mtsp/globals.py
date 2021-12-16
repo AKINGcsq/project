@@ -7,7 +7,7 @@ Contains all global variables specific to simulation
 xMax = 1000
 yMax = 1000
 seedValue = 1
-numNodes = 200
+numNodes = 51
 numGenerations = 70
 # size of population
 populationSize = 100
