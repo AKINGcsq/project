@@ -1,15 +1,18 @@
 from galogic import *
 import matplotlib.pyplot as plt
 import progressbar
+import os
 pbar = progressbar.ProgressBar()
 
-import os
 
-path = os.getcwd()
 
-fileList = os.listdir(path+'/dataset')
+
+path = os.path.dirname(os.path.realpath(__file__))
+father_path=os.path.abspath(os.path.dirname(path)+os.path.sep+"..")
+# print(father_path)
+fileList = os.listdir(father_path+'/dataset')
 for i in range(len(fileList)):
-    fileList[i] = path + '/dataset/' + fileList[i]
+    fileList[i] = father_path+'\\dataset\\'+fileList[i]
 
 filename = fileList[3]
 c = 0
